@@ -1,0 +1,29 @@
+
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h2>Feedback Form</h2>
+
+      <form onSubmit={handleSubmit}>
+        <input type="text" placeholder="Enter Name" ref={nameRef} required />
+        <br /><br />
+
+        <input type="email" placeholder="Enter Email" ref={emailRef} required />
+        <br /><br />
+
+        <textarea placeholder="Enter Feedback" ref={messageRef} required />
+        <br /><br />
+
+        <button type="submit">Submit</button>
+      </form>
+
+      {data && (
+        <div style={{ marginTop: "20px" }}>
+          <h3>Submitted Data</h3>
+          <p><b>Name:</b> {data.name}</p>
+          <p><b>Email:</b> {data.email}</p>
+          <p><b>Message:</b> {data.message}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
